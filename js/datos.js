@@ -11,36 +11,106 @@ window.PROYECTOS = [
   {
     slug: "bloom-store",
     titulo: "Bloom Store",
-    cliente: "Marca de accesorios",
-    anio: "2025",
+    cliente: "Marca de accesorios · desde 2023",
+    anio: "2023 – hoy",
     rol: "Identidad de marca, dirección de arte, contenido",
-    entregables: "Piezas para redes, catálogo PDF y web, reel",
+    entregables: "Logo, piezas para redes, catálogo PDF y web, reel",
     herramientas: "Illustrator, InDesign, Lightroom, CapCut",
     categorias: ["identidad", "editorial", "redes", "audiovisual"],
     color: "ph--mora",
     portada: { src: "", label: "Portada · Bloom Store" },
-    resumen: "Una marca de accesorios que necesitaba sentirse tan delicada como sus piezas: un sistema lila, suave y ordenado que vive igual de bien en un feed, en un catálogo y en un reel.",
+    resumen: "Una marca que se queda: acompaño a Bloom Store desde 2023, con un logo que no ha cambiado y una identidad que evoluciona sin perder su esencia.",
     concepto: {
       titulo: "Florecer en los detalles",
-      texto: "Bloom vende piezas pequeñas, así que el concepto fue mirar de cerca: encuadres cerrados, mucho aire alrededor y una paleta lila que hace protagonista a cada accesorio. La identidad combina una serif delicada con fotografía de producto limpia, y deja espacio para recursos análogos como etiquetas, cajas y texturas."
+      texto: "Bloom vende piezas pequeñas, así que el concepto fue mirar de cerca: encuadres cerrados, aire alrededor y una paleta lila que deja protagonismo a cada accesorio. La identidad combina una serif delicada con fotografía de producto limpia y recursos hechos a mano: etiquetas, cajas y texturas."
     },
     pasos: [
       ["Habitar", "Conocer la tienda, el producto y a quien lo compra."],
-      ["Moodboard", "Lilas, luz suave, joyería sobre texturas."],
+      ["Conceptualizar", "Lilas, luz suave y joyería sobre texturas."],
       ["Sistema", "Retículas para feed, catálogo y stories."],
-      ["Producción", "Fotos de producto, piezas y edición de reel."]
+      ["Materializar", "Fotos de producto, piezas y edición de reel."]
     ],
     antes: { src: "", label: "Boceto / moodboard" },
     despues: { src: "", label: "Pieza final" },
-    resultado: "Un ecosistema visual coherente: piezas para redes con identidad propia, un catálogo que funciona en PDF y en web, y un reel tipo vlog que muestra la marca desde adentro.",
+    resultado: "Un ecosistema visual que crece con la marca: piezas para redes con identidad propia, un catálogo que funciona en PDF y en web, y un reel tipo vlog que muestra la marca desde adentro.",
     paleta: ["#B9A6E0", "#E9E3F7", "#6B5A9E", "#F6F2FB"],
     galeria: [
-      { tipo: "img", label: "Piezas para redes", ancho: true, ar: "16/10" },
+      { tipo: "img", label: "Evolución 2023 → hoy", ancho: true, ar: "16/10" },
       { tipo: "telefono", label: "Reel · vlog" },
       { tipo: "img", label: "Catálogo · portada", ar: "3/4" },
       { tipo: "img", label: "Catálogo · interior", ar: "3/4" },
       { tipo: "img", label: "Catálogo web", ar: "3/4" },
       { tipo: "img", label: "Detalle de producto", completo: true, ar: "21/9" }
+    ]
+  },
+  {
+    slug: "danny-road",
+    titulo: "Danny Road",
+    cliente: "Videoclip musical",
+    anio: "2025",
+    rol: "Equipo de arte: concepto, vestuario y ambientación",
+    entregables: "Propuesta de arte, vestuario, ambientación del set",
+    herramientas: "Moodboards, Illustrator, Lightroom",
+    categorias: ["direccion", "audiovisual"],
+    color: "ph--ciruela",
+    portada: { src: "", label: "Portada · Danny Road" },
+    resumen: "Cómo se arma el concepto de un videoclip: referentes de casino y rock convertidos en vestuario, ambientación y una atmósfera que acompaña la canción.",
+    concepto: {
+      titulo: "Casino, rock y una atmósfera propia",
+      texto: "Partimos de dos mundos: el brillo del casino y la actitud del rock. Desde el equipo de arte traduje esos referentes en una paleta, en piezas de vestuario y en la ambientación de cada escena, para que todo lo que aparece en cuadro tenga un porqué."
+    },
+    pasos: [
+      ["Habitar", "Escuchar la canción y entender al artista."],
+      ["Referentes", "Casino, rock, texturas y luz."],
+      ["Vestuario", "Siluetas, color y accesorios por personaje."],
+      ["Set", "Ambientación y objetos en cuadro."]
+    ],
+    antes: { src: "", label: "Moodboard de arte" },
+    despues: { src: "", label: "Fotograma final" },
+    resultado: "Un videoclip con una identidad visual coherente de principio a fin, en el que el arte cuenta tanto como la música.",
+    paleta: ["#1E1A1C", "#B0263A", "#D4A64A", "#EFE6D6"],
+    galeria: [
+      { tipo: "img", label: "Moodboard · referentes", ancho: true, ar: "16/10" },
+      { tipo: "telefono", label: "Fragmento del videoclip" },
+      { tipo: "img", label: "Vestuario", ar: "3/4" },
+      { tipo: "img", label: "Ambientación del set", ar: "3/4" },
+      { tipo: "img", label: "Detrás de cámaras", ar: "3/4" },
+      { tipo: "img", label: "Fotogramas", completo: true, ar: "21/9" }
+    ]
+  },
+  {
+    slug: "tradicion-en-canasta",
+    titulo: "Tradición en Canasta",
+    cliente: "Tiendas de barrio · cultura",
+    anio: "2025",
+    rol: "Investigación, dirección de arte, fotografía",
+    entregables: "Registro fotográfico y piezas gráficas",
+    herramientas: "Cámara, Lightroom, Illustrator",
+    categorias: ["direccion", "fotografia", "identidad"],
+    color: "ph--salvia",
+    portada: { src: "", label: "Portada · Tradición en Canasta" },
+    resumen: "Lo que me enseñaron las tiendas de barrio: al habitar esos espacios descubrí que los detalles comunican más de lo que parece.",
+    concepto: {
+      titulo: "Los detalles comunican",
+      texto: "Antes de diseñar, me senté en las tiendas: miré cómo se acomoda la mercancía, cómo se escriben los letreros a mano y cómo se saluda a cada vecino. El proyecto convierte esa cultura cotidiana en imagen, con respeto por las personas y las historias que retrata."
+    },
+    pasos: [
+      ["Habitar", "Visitar, conversar y observar las tiendas."],
+      ["Registrar", "Fotografía de objetos, letreros y gestos."],
+      ["Conceptualizar", "Lo cotidiano como identidad."],
+      ["Materializar", "Piezas que devuelven la mirada al barrio."]
+    ],
+    antes: { src: "", label: "Registro de campo" },
+    despues: { src: "", label: "Pieza final" },
+    resultado: "Un proyecto que hace visibles prácticas que suelen pasar desapercibidas y las presenta con el detalle que merecen.",
+    paleta: ["#C8553D", "#F2D0A4", "#588157", "#F7EFE2"],
+    galeria: [
+      { tipo: "img", label: "Tienda de barrio", ancho: true, ar: "16/10" },
+      { tipo: "img", label: "Letreros a mano", ar: "4/5" },
+      { tipo: "img", label: "Objetos", ar: "4/5" },
+      { tipo: "img", label: "Retrato", ar: "4/5" },
+      { tipo: "img", label: "Piezas gráficas", ar: "4/5" },
+      { tipo: "img", label: "Registro completo", completo: true, ar: "21/9" }
     ]
   },
   {
@@ -51,19 +121,19 @@ window.PROYECTOS = [
     rol: "Concepto de marca, fotografía, planeación de contenidos",
     entregables: "Piezas para evento, sesión de fotos, reel",
     herramientas: "Illustrator, Lightroom, Canva, CapCut",
-    categorias: ["identidad", "fotografia", "redes", "audiovisual"],
+    categorias: ["direccion", "identidad", "fotografia", "redes", "audiovisual"],
     color: "ph--ciruela",
     portada: { src: "", label: "Portada · Velvet Club" },
-    resumen: "Una marca de ropa con alma de club: conceptualicé un evento, planeé el contenido y dirigí una sesión de fotos que se siente cálida, cercana y un poco romántica.",
+    resumen: "Una marca de ropa con espíritu de club: conceptualicé un evento, planeé el contenido y dirigí una sesión de fotos cálida y cercana.",
     concepto: {
       titulo: "Una invitación, no un anuncio",
-      texto: "Cada pieza de Velvet Club se pensó como una invitación personal: sobres, sellos, tipografía cursiva y tonos rosa y vino. La fotografía siguió el mismo concepto, con luz natural, naturaleza y amigas compartiendo, para que la marca se viva como un plan y no como un catálogo."
+      texto: "Cada pieza de Velvet Club se pensó como una invitación personal: sobres, sellos, tipografía cursiva y tonos rosa y vino. La fotografía siguió el mismo concepto, con luz natural y amigas compartiendo, para que la marca se viva como un plan y no como un catálogo."
     },
     pasos: [
-      ["Concepto", "El club como lugar de encuentro."],
-      ["Evento", "Invitaciones y piezas con lenguaje de correspondencia."],
-      ["Fotografía", "Planeación, locación, styling y dirección."],
-      ["Reel", "Narrativa audiovisual del concepto de marca."]
+      ["Conceptualizar", "El club como lugar de encuentro."],
+      ["Evento", "Invitaciones con lenguaje de correspondencia."],
+      ["Fotografía", "Locación, styling y dirección."],
+      ["Reel", "Narrativa audiovisual de la marca."]
     ],
     antes: { src: "", label: "Planeación / boceto" },
     despues: { src: "", label: "Pieza final" },
@@ -89,13 +159,13 @@ window.PROYECTOS = [
     categorias: ["editorial"],
     color: "ph--ciruela",
     portada: { src: "", label: "Portada · Museos de Pereira" },
-    resumen: "Una ruta por los museos y galerías de Pereira resumida en un flyer: mucha información, ordenada para que dé ganas de salir a recorrer la ciudad.",
+    resumen: "Una ruta por los museos y galerías de Pereira en un solo flyer: mucha información, ordenada para que den ganas de salir a recorrer la ciudad.",
     concepto: {
       titulo: "¿Por qué hablar de arte en Pereira?",
-      texto: "La pieza responde a esa pregunta con una jerarquía clara: espacios, horarios y datos clave organizados en bloques, tipografía condensada con carácter y un QR que conecta el papel con lo digital. Es mi forma favorita de diseñar: lo cultural contado con orden."
+      texto: "La pieza responde a esa pregunta con una jerarquía clara: espacios, horarios y datos clave en bloques, tipografía condensada con carácter y un QR que conecta el papel con lo digital. Lo cultural, contado con orden."
     },
     pasos: [
-      ["Investigar", "Visitar y listar museos y galerías."],
+      ["Habitar", "Visitar y listar museos y galerías."],
       ["Jerarquizar", "Decidir qué se lee primero."],
       ["Componer", "Retícula, tipografía y color."],
       ["Conectar", "QR e interacción con lo digital."]
@@ -113,40 +183,43 @@ window.PROYECTOS = [
   {
     slug: "media-kit",
     titulo: "Media kit",
-    cliente: "Creadora de contenido",
+    cliente: "Valeria Alvarado · creadora de contenido",
     anio: "2025",
-    rol: "Diseño de portafolio, marca personal",
-    entregables: "Media kit funcional e interactivo",
-    herramientas: "Figma, Canva, Illustrator",
-    categorias: ["identidad", "editorial", "web"],
+    rol: "Diseño editorial, dirección de arte, marca personal",
+    entregables: "Media kit de una página para marcas y redes",
+    herramientas: "Canva, Illustrator",
+    categorias: ["identidad", "editorial"],
     color: "ph--mora",
-    portada: { src: "", label: "Portada · Media kit" },
-    resumen: "Un portafolio para una creadora de contenido: su personalidad, sus métricas y sus colaboraciones en un documento rosa, cálido e interactivo.",
+    portada: { src: "assets/proyectos/media-kit/portada.webp", label: "Portada · Media kit de Valeria Alvarado", ar: "16/9" },
+    resumen: "El portafolio de Valeria Alvarado, cosmetóloga y creadora de contenido: quién es, su forma de conectar, su trabajo con marcas y sus planes, en una sola pieza rosa, cercana y llena de collage.",
     concepto: {
-      titulo: "Una marca que se siente como ella",
-      texto: "El media kit tenía que ser útil para las marcas y fiel a la creadora. Combiné collage, flores y fotografías recortadas con una estructura clara de datos, para que se lea rápido y se recuerde."
+      titulo: "Un expediente que se abre",
+      texto: "La pieza arranca con una carpeta rosa que dice «Portafolio», como si abriéramos su expediente. Desde ahí, estrellas de puntas, fotos recortadas con borde blanco y objetos retro (megáfono, cámara, teléfono) acompañan cada sección, y la tipografía mezcla una sans en itálica con una caligrafía para la palabra que se quiere destacar."
     },
     pasos: [
-      ["Escuchar", "Entender su voz y su audiencia."],
-      ["Marca personal", "Paleta, tipografía y recursos gráficos."],
-      ["Estructura", "Métricas, servicios y casos."],
-      ["Interacción", "Navegación y enlaces funcionales."]
+      ["Habitar", "Conocer a Valeria, su audiencia y las marcas con las que trabaja."],
+      ["Identidad", "Rosa, estrellas de puntas, recortes y caligrafía."],
+      ["Estructura", "Sobre mí, forma de conectar, trabajo, marcas, planes y contacto."],
+      ["Materializar", "Fotos recortadas, reels en marcos y tabla de planes."]
     ],
     antes: { src: "", label: "Wireframe" },
-    despues: { src: "", label: "Media kit final" },
-    resultado: "Un media kit que se envía con orgullo: profesional para las marcas y con la personalidad de la creadora en cada página.",
-    paleta: ["#D98BA8", "#F6DCE6", "#8E3B5E", "#FFF4F7"],
+    despues: { src: "assets/proyectos/media-kit/portada.webp", label: "Media kit final" },
+    resultado: "Un media kit que se lee de arriba abajo como una conversación: presenta a Valeria, muestra su contenido real y sus marcas aliadas, y cierra con planes claros y botones para contactarla.",
+    paleta: ["#E3B6C3", "#CB8A9B", "#A3536F", "#F0EAE5"],
     galeria: [
-      { tipo: "img", label: "Media kit · portada", ar: "3/4" },
-      { tipo: "img", label: "Media kit · métricas", ar: "3/4" },
-      { tipo: "img", label: "Media kit · servicios", ar: "3/4" },
-      { tipo: "img", label: "Vista general", completo: true, ar: "21/9" }
+      { tipo: "img", src: "assets/proyectos/media-kit/sobre-mi.webp", label: "Sobre mí", ancho: true, ar: "1600/898" },
+      { tipo: "scroll", src: "assets/proyectos/media-kit/completo.webp", label: "Vista completa", alto: "430px" },
+      { tipo: "img", src: "assets/proyectos/media-kit/conectar.webp", label: "Mi forma de conectar", completo: true, ar: "1600/891" },
+      { tipo: "img", src: "assets/proyectos/media-kit/trabajo.webp", label: "Conoce mi trabajo", completo: true, ar: "1600/987" },
+      { tipo: "img", src: "assets/proyectos/media-kit/marcas.webp", label: "Marcas aliadas", completo: true, ar: "1600/475" },
+      { tipo: "img", src: "assets/proyectos/media-kit/precios.webp", label: "Planes y precios", ancho: true, ar: "1600/929" },
+      { tipo: "img", src: "assets/proyectos/media-kit/contacto.webp", label: "Trabajemos juntos", ar: "1600/894" }
     ]
   },
   {
     slug: "proyecto-universitario",
-    titulo: "Agenda cultural",
-    cliente: "Proyecto universitario",
+    titulo: "Piezas culturales",
+    cliente: "Proyecto universitario · UCC",
     anio: "2024",
     rol: "Identidad visual, piezas gráficas",
     entregables: "Serie de piezas para redes",
@@ -157,7 +230,7 @@ window.PROYECTOS = [
     resumen: "Una serie de piezas con identidad retro para anunciar planes culturales: El Parque de los Gatos, Save the Date y La Materna.",
     concepto: {
       titulo: "Nostalgia con orden",
-      texto: "Tomé la estética de los carteles y discos de los 70 (tipografías redondas, colores cálidos, texturas de impresión) y la llevé a un sistema repetible para redes, para que cada pieza sea distinta pero claramente de la misma familia."
+      texto: "Tomé la estética de los carteles y discos de los 70 (tipografías redondas, colores cálidos, texturas de impresión) y la llevé a un sistema para redes, para que cada pieza sea distinta pero claramente de la misma familia."
     },
     pasos: [
       ["Referentes", "Carteles, discos y gráfica de los 70."],
@@ -167,7 +240,7 @@ window.PROYECTOS = [
     ],
     antes: { src: "", label: "Referentes" },
     despues: { src: "", label: "Serie final" },
-    resultado: "Una identidad flexible que permite producir nuevas piezas rápido sin perder coherencia.",
+    resultado: "Una identidad flexible que permite producir nuevas piezas sin perder coherencia.",
     paleta: ["#D9822B", "#3E8C8A", "#C4B04A", "#F2E3C6"],
     galeria: [
       { tipo: "img", label: "El Parque de los Gatos", ar: "4/5" },
@@ -180,20 +253,20 @@ window.PROYECTOS = [
     titulo: "Marca personal",
     cliente: "Alejandra Correa",
     anio: "2025",
-    rol: "Identidad, dirección de arte, web",
-    entregables: "Manual de marca, portafolio PDF y web",
+    rol: "Identidad, relato de marca, dirección de arte, web",
+    entregables: "Relato y manual de marca, portafolio PDF y web",
     herramientas: "Illustrator, InDesign, Figma, HTML/CSS",
-    categorias: ["identidad", "editorial", "web"],
+    categorias: ["direccion", "identidad", "editorial", "web"],
     color: "ph--salvia",
     portada: { src: "", label: "Portada · Marca personal" },
-    resumen: "Mi propia identidad: una mirada artística con estructura clara. Estrellas, flores recortadas y papel, en ciruela, crema y verde salvia.",
+    resumen: "Mi propia identidad: un collage editorial y digital con recortes, papel, puntos y trazos a mano sobre composiciones ordenadas, en ciruela, crema y verde salvia.",
     concepto: {
-      titulo: "Si miras de cerca, todo tiene un porqué",
-      texto: "Construí mi marca con lo que soy: lo análogo dentro de lo digital. El collage, las texturas de papel, las flechas a mano y las estrellas son mi firma, y la tipografía editorial y la retícula ordenada son la estructura que los sostiene."
+      titulo: "Busco estrellas en lo cotidiano",
+      texto: "Construí mi marca desde tres arquetipos: la Creadora pone las manos, la Maga vuelve los fragmentos un universo y la Rebelde interrumpe lo impecable de la pantalla con lo imperfecto del papel. La estrella me acompaña a todas partes."
     },
     pasos: [
       ["Habitarme", "Qué me mueve y cómo trabajo."],
-      ["Concepto", "Detalle, perspectiva y equilibrio."],
+      ["Relato", "Propósito, arquetipos y voz."],
       ["Sistema", "Paleta, tipografías y recursos."],
       ["Ecosistema", "Redes, PDF y esta web."]
     ],
@@ -210,6 +283,7 @@ window.PROYECTOS = [
 ];
 
 window.CATEGORIAS = {
+  direccion: "Dirección de arte",
   identidad: "Identidad",
   editorial: "Editorial",
   redes: "Redes",
@@ -223,7 +297,9 @@ window.CONTACTO = {
   whatsapp: "573103982677",
   whatsappVisible: "+57 310 398 2677",
   instagram: "_thxale",
-  correo: "tucorreo@ejemplo.com",
-  behance: "https://www.behance.net/",
-  tiktok: "https://www.tiktok.com/"
+  correo: "designsbyalejandrac@gmail.com",
+  behance: "",           /* link a tu perfil; vacío = no se muestra */
+  tiktok: "https://www.tiktok.com/@aleewithluv",
+  /* Link de ALMA, tu app de brief. Si queda vacío, los botones muestran un aviso. */
+  alma: ""
 };
