@@ -4,156 +4,160 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sobre mí · Alejandra Correa</title>
-  <meta name="description" content="Alejandra Correa, diseñadora crossmedia de Pereira. Manifiesto, proceso, habilidades y lo que me inspira.">
+  <meta name="description" content="Alejandra Correa, diseñadora crossmedia de Pereira. Propósito, arquetipos, proceso y lo que pasa detrás: habito, conceptualizo y materializo.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Alejandra Correa · Portafolio">
+  <meta property="og:title" content="Sobre mí · Alejandra Correa">
+  <meta property="og:description" content="Alejandra Correa, diseñadora crossmedia de Pereira. Propósito, arquetipos, proceso y lo que pasa detrás: habito, conceptualizo y materializo.">
+  <meta name="twitter:card" content="summary">
+  <meta name="author" content="Alejandra Correa">
   <meta name="theme-color" content="#683651">
   <link rel="icon" href="assets/estrella-mora.webp">
   <link rel="preload" href="assets/fuentes/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Framework CSS: Bootstrap 5.3 (solo grilla y utilidades) -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-utilities.min.css">
+  <!-- Design System: tokens → base → átomos → moléculas → organismos → plantillas -->
+  <link rel="stylesheet" href="css/01-tokens.css">
+  <link rel="stylesheet" href="css/02-base.css">
+  <link rel="stylesheet" href="css/03-atomos.css">
+  <link rel="stylesheet" href="css/04-moleculas.css">
+  <link rel="stylesheet" href="css/05-organismos.css">
+  <link rel="stylesheet" href="css/06-plantillas.css">
 </head>
 <body data-pagina="sobre-mi">
-<main>
+<a class="visually-hidden-focusable saltar" href="#contenido">Saltar al contenido</a>
+<main id="contenido" tabindex="-1">
 
   <!-- ================= HERO ================= -->
   <section class="sobre-hero">
     <div class="contenedor sobre-hero__grid">
-      <div class="sobre-foto" data-anim="caer" style="--r:-4deg">
+    <div class="row align-items-center gy-5">
+      <div class="col-12 col-lg-5 d-flex justify-content-center"><div class="sobre-foto" data-anim="caer" style="--r:-4deg">
         <div class="polaroid polaroid--atras"></div>
         <figure class="polaroid" style="margin:0">
           <span class="cinta" style="top:-14px;left:calc(50% - 48px);transform:rotate(-4deg)"></span>
-          <div class="lupa-zona" data-cursor="lupa">
-            <div class="ph ph--salvia" data-label="Foto de Aleja"></div>
-            <div class="capa-boceto"><div class="ph ph--boceto" data-label="Aleja, a lápiz"></div></div>
-          </div>
+          <div class="ph ph--salvia" data-label="Foto de Ale"><img src="assets/fotos/ale.webp" alt="Alejandra Correa" style="object-position:50% 30%"></div>
           <figcaption>Pereira, Colombia</figcaption>
         </figure>
-        <img class="estrella" src="assets/estrella-oro.webp" alt="" style="right:-30px;top:-26px" data-girar=".1">
-        <img class="estrella" src="assets/estrella-mora.webp" alt="" style="right:4px;top:30px;width:48px" data-girar="-.08">
-        <img class="flor" src="assets/flor.webp" alt="" style="left:-70px;bottom:-60px;width:180px;transform:rotate(-14deg)">
-      </div>
-      <div>
-        <span class="eyebrow" data-anim="subir">Sobre mí</span>
-        <h1 class="titulo-anim">Soy <span class="firma">Aleja</span></h1>
-        <p class="lead" data-anim="subir" style="--d:.3s">Soy diseñadora crossmedia de Pereira y estoy en el último semestre de Diseño Crossmedia en la Universidad Cooperativa de Colombia. Llevo tres años trabajando como diseñadora gráfica freelance y me especializo en dirección de arte y conceptualización de marcas.</p>
-        <p data-anim="subir" style="--d:.4s">Me muevo entre lo cultural, lo editorial y lo audiovisual, y guío el rumbo visual de cada proyecto, de la primera idea a su desarrollo, buscando siempre el equilibrio entre estética, emotividad y funcionalidad.</p>
-        <div class="chips" data-anim="subir" style="--d:.5s;margin-top:26px">
-          <span class="chip" style="--r:-2deg">Creativa</span><span class="chip" style="--r:1.5deg">Organizada</span><span class="chip" style="--r:-1deg">Responsable</span>
-          <span class="chip" style="--r:2deg">Dispuesta</span><span class="chip" style="--r:-1.5deg">Meticulosa</span><span class="chip" style="--r:1deg">Comunicación asertiva</span>
-        </div>
-      </div>
+        <img class="estrella" src="assets/estrella-oro.webp" alt="" style="right:-20px;top:-26px" data-girar=".1">
+        <img class="estrella" src="assets/estrella-mora.webp" alt="" style="right:14px;top:34px;width:48px" data-girar="-.08">
+        <img class="flor" src="assets/flor.webp" alt="" style="left:-50px;bottom:-50px;width:170px;transform:rotate(-14deg)">
+      </div></div>
+      <div class="col-12 col-lg-7"><div>
+        <h1 class="titulo-anim">Soy <span class="firma">Ale</span></h1>
+        <p class="lead" data-anim="subir" style="--d:.3s">Alejandra María Correa, diseñadora crossmedia y directora de arte. Estudio octavo semestre de Diseño Crossmedia en la Universidad Cooperativa de Colombia y trabajo como freelance desde hace tres años.</p>
+        <p data-anim="subir" style="--d:.4s">Me muevo entre la música, la moda, el arte, la cultura y la ruralidad. Mi propósito es darle forma visual a lo que tiene alma, para que las identidades, prácticas y personas que suelen pasar desapercibidas se vean con el detalle que merecen.</p>
+      </div></div>
+    </div>
     </div>
   </section>
 
-  <div class="marquee marquee--ciruela marquee--inverso" aria-hidden="true">
-    <div class="marquee__pista" style="--vel:44s">
-      <span class="marquee__item">Música <img src="assets/estrella-oro.webp" alt=""></span>
-      <span class="marquee__item">Moda <img src="assets/estrella-mora.webp" alt=""></span>
-      <span class="marquee__item">Arte <img src="assets/estrella-oro.webp" alt=""></span>
-      <span class="marquee__item">Cultura <img src="assets/estrella-mora.webp" alt=""></span>
-      <span class="marquee__item">Collage <img src="assets/estrella-oro.webp" alt=""></span>
-      <span class="marquee__item">Papel <img src="assets/estrella-mora.webp" alt=""></span>
-      <span class="marquee__item">Hecho a mano <img src="assets/estrella-oro.webp" alt=""></span>
-    </div>
-  </div>
-
-  <!-- ================= MANIFIESTO ================= -->
-  <section class="seccion manifiesto">
+  <!-- ================= ARQUETIPOS (breve) ================= -->
+  <section class="arquetipos-breve">
     <div class="contenedor">
-      <div class="centrado" style="text-align:center;margin-bottom:40px"><span class="eyebrow">Manifiesto</span></div>
-      <p class="manifiesto__texto">Creo en el arte y el diseño como lenguajes que transforman. Por eso habito antes de diseñar: visito, pregunto y miro de cerca, porque los detalles transmiten más de lo que parece. Para mí la estética es una forma de transmitir calma e identidad. Busco el equilibrio entre estética, emotividad y funcionalidad. Y creo que, si miras de cerca, todo tiene un porqué.</p>
+      <p class="arquetipos-breve__intro" data-anim="subir">Mi carácter en tres arquetipos:</p>
+      <ul class="arquetipos-breve__lista">
+        <li data-anim="subir" style="--d:.05s"><span class="arq-letra">C</span><span><b>La Creadora</b> · la raíz: pongo las manos y llevo la idea hasta que existe.</span></li>
+        <li data-anim="subir" style="--d:.15s"><span class="arq-letra arq-letra--salvia">M</span><span><b>La Maga</b> · el método: de una idea suelta a un universo visual.</span></li>
+        <li data-anim="subir" style="--d:.25s"><span class="arq-letra arq-letra--ciruela">R</span><span><b>La Rebelde</b> · la postura: si todo se parece, tomo otro camino.</span></li>
+      </ul>
+      <button class="estrella-oculta" data-id="sobre-mi" style="right:var(--pad);top:-10px"></button>
     </div>
-    <img class="estrella" src="assets/estrella-mora.webp" alt="" style="left:7%;top:20%" data-parallax="1" data-girar=".08">
-    <img class="estrella" src="assets/estrella-oro.webp" alt="" style="right:8%;bottom:18%;width:56px" data-parallax="-1" data-girar="-.06">
   </section>
 
-  <!-- ================= RECORRIDO / PROCESO ================= -->
-  <section class="seccion recorrido">
+  <!-- ================= PROCESO ================= -->
+  <section class="seccion">
     <div class="contenedor">
       <div class="seccion__cabeza">
-        <div><span class="eyebrow" data-anim="subir">Cómo trabajo</span><h2 class="titulo-anim" style="margin-top:14px">Mi <em>proceso</em></h2></div>
-        <div class="recorrido__controles" data-anim="subir">
-          <button class="circulo-btn" type="button" data-desliza="-1" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
-          <button class="circulo-btn" type="button" data-desliza="1" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        </div>
+        <h2 class="titulo-anim">El <em>proceso</em></h2>
+        <p data-anim="subir">Tú traes la historia; yo te acompaño a encontrar su forma.</p>
+      </div>
+      <div class="pasos3">
+        <article class="paso3" data-anim="caer" style="--r:-1.5deg;--d:0s">
+          <span class="paso3__num">01</span><h3>Habito</h3>
+          <p>Antes de abrir un programa, visito, pregunto y miro de cerca. Entiendo tu tema, tu lugar y a tu gente desde adentro.</p>
+          <svg class="flecha-paso" viewBox="0 0 90 40"><path d="M4 28c22-20 50-24 76-10M68 8l12 10-14 6"/></svg>
+        </article>
+        <article class="paso3" data-anim="caer" style="--r:1.2deg;--d:.15s">
+          <span class="paso3__num">02</span><h3>Conceptualizo</h3>
+          <p>Convierto lo que encontré en concepto y atmósfera: referentes, moodboard y un universo visual con sentido.</p>
+          <svg class="flecha-paso" viewBox="0 0 90 40"><path d="M4 28c22-20 50-24 76-10M68 8l12 10-14 6"/></svg>
+        </article>
+        <article class="paso3 paso3--final" data-anim="caer" style="--r:-1deg;--d:.3s">
+          <span class="paso3__num">03</span><h3>Materializo</h3>
+          <p>Le doy forma en cada medio: identidad, piezas gráficas, fotografía, video o web, con un toque hecho a mano cuando el proyecto lo pide.</p>
+        </article>
       </div>
     </div>
-    <div class="recorrido__pista">
-      <article class="etapa" data-anim="caer" style="--d:0s"><div class="tarjeta" style="--r:-1.5deg">
-        <div class="etapa__num">01</div><h3>Habitar</h3>
-        <p>Antes de abrir un programa, visito, pregunto y miro de cerca. Quiero entender el tema, el lugar y a las personas desde adentro.</p>
-        <svg class="flecha-conector" viewBox="0 0 60 30"><path d="M2 20c16-14 34-16 52-6M46 6l8 8-10 4"/></svg>
-      </div></article>
-      <article class="etapa" data-anim="caer" style="--d:.1s"><div class="tarjeta" style="--r:1.2deg">
-        <div class="etapa__num">02</div><h3>Investigar</h3>
-        <p>Referentes, moodboards y bocetos. Aquí aparecen las primeras pistas: colores, texturas, palabras que definen el proyecto.</p>
-        <svg class="flecha-conector" viewBox="0 0 60 30"><path d="M2 20c16-14 34-16 52-6M46 6l8 8-10 4"/></svg>
-      </div></article>
-      <article class="etapa" data-anim="caer" style="--d:.2s"><div class="tarjeta" style="--r:-1deg">
-        <div class="etapa__num">03</div><h3>Traducir</h3>
-        <p>Convierto el concepto en un sistema visual: composición, color y tipografía capaces de vivir en distintos formatos sin perder su esencia.</p>
-        <svg class="flecha-conector" viewBox="0 0 60 30"><path d="M2 20c16-14 34-16 52-6M46 6l8 8-10 4"/></svg>
-      </div></article>
-      <article class="etapa" data-anim="caer" style="--d:.3s"><div class="tarjeta" style="--r:1.6deg">
-        <div class="etapa__num">04</div><h3>Materializar</h3>
-        <p>Piezas gráficas, fotografía, reels o web. Mi diseño es mayormente digital, pero cuando puedo le doy un toque hecho a mano.</p>
-        <svg class="flecha-conector" viewBox="0 0 60 30"><path d="M2 20c16-14 34-16 52-6M46 6l8 8-10 4"/></svg>
-      </div></article>
-      <article class="etapa" data-anim="caer" style="--d:.4s"><div class="tarjeta" style="--r:-1.2deg;background:var(--ciruela);color:var(--crema)">
-        <div class="etapa__num" style="color:var(--mora)">05</div><h3 style="color:var(--crema)">Conectar</h3>
-        <p>El proyecto sale al mundo. Trabajo con respeto, consideración y lealtad: la colaboración es un espacio de confianza.</p>
-        <button class="estrella-oculta" data-id="sobre-mi" style="right:18px;bottom:18px"></button>
-      </div></article>
+  </section>
+
+  <!-- ================= LO QUE PASA DETRÁS ================= -->
+  <section class="seccion bts-seccion">
+    <div class="contenedor">
+      <div class="seccion__cabeza">
+        <h2 class="titulo-anim">Lo que <em>pasa detrás</em></h2>
+        <p data-anim="subir">Un poco de los procesos: mi espacio de trabajo, los bocetos, los rodajes y el papel antes de la pantalla. Mueve las fotos y míralas de cerca.</p>
+      </div>
+      <div class="bts" data-anim="subir" aria-label="Fotos de lo que pasa detrás: puedes arrastrarlas">
+        <figure class="polaroid bts__foto" data-arrastrable style="--x:4%;--y:8%;--mx:2%;--my:0%;--r:-5deg;z-index:10">
+          <span class="cinta"></span>
+          <div class="ph ph--salvia" style="--ar:4/5" data-label="Foto · mi mesa de trabajo"></div>
+          <figcaption>mi mesa de trabajo</figcaption>
+        </figure>
+        <figure class="polaroid bts__foto" data-arrastrable style="--x:24%;--y:30%;--mx:50%;--my:10%;--r:4deg;z-index:11">
+          <span class="cinta cinta--mora"></span>
+          <div class="ph ph--crema" style="--ar:1/1" data-label="Foto · bocetos a mano"></div>
+          <figcaption>bocetos a mano</figcaption>
+        </figure>
+        <figure class="polaroid bts__foto" data-arrastrable style="--x:44%;--y:4%;--mx:4%;--my:28%;--r:-2deg;z-index:12">
+          <span class="cinta"></span>
+          <div class="ph ph--ciruela" style="--ar:4/5" data-label="Foto · en rodaje"></div>
+          <figcaption>en rodaje</figcaption>
+        </figure>
+        <figure class="polaroid bts__foto" data-arrastrable style="--x:63%;--y:26%;--mx:50%;--my:38%;--r:6deg;z-index:13">
+          <span class="cinta cinta--mora"></span>
+          <div class="ph ph--mora" style="--ar:1/1" data-label="Foto · papel y tijeras"></div>
+          <figcaption>papel y tijeras</figcaption>
+        </figure>
+        <figure class="polaroid bts__foto" data-arrastrable style="--x:81%;--y:6%;--mx:22%;--my:56%;--r:-4deg;z-index:14">
+          <span class="cinta"></span>
+          <div class="ph ph--salvia" style="--ar:4/5" data-label="Foto · sesión de fotos"></div>
+          <figcaption>sesión de fotos</figcaption>
+        </figure>
+        <img class="mesa__deco" src="assets/estrella-oro.webp" alt="" style="left:36%;top:78%;width:46px;transform:rotate(16deg)">
+      </div>
     </div>
   </section>
 
   <!-- ================= HABILIDADES ================= -->
-  <section class="seccion" style="padding-top:20px">
+  <section class="seccion habilidades-ciruela feston-top puntos-bottom" style="--feston:var(--ciruela)">
     <div class="contenedor habilidades">
-      <div>
-        <span class="eyebrow" data-anim="subir">Enfoques</span>
-        <h2 class="titulo-anim" style="margin:14px 0 30px">Lo que <em>sé hacer</em></h2>
+    <div class="row gy-5 gx-lg-5">
+      <div class="col-12 col-md-6"><div>
+        <h2 class="titulo-anim" style="margin:0 0 30px">Lo que <em>hago</em></h2>
         <ul class="hab-lista" data-anim="subir">
-          <li>Dirección de arte</li>
-          <li>Diseño gráfico y de marca</li>
-          <li>Diseño editorial</li>
+          <li>Dirección de arte y conceptualización</li>
+          <li>Identidad visual</li>
+          <li>Diseño editorial y media kits</li>
           <li>Fotografía</li>
-          <li>Procesos audiovisuales</li>
-          <li>Diseño web · UI/UX</li>
+          <li>Producción audiovisual y videoclips</li>
+          <li>Diseño web · UI</li>
         </ul>
-      </div>
-      <div>
-        <span class="eyebrow" data-anim="subir">Herramientas</span>
-        <h2 class="titulo-anim" style="margin:14px 0 30px">Mi <em>mesa digital</em></h2>
+      </div></div>
+      <div class="col-12 col-md-6"><div>
+        <h2 class="titulo-anim" style="margin:0 0 30px">Mi <em>mesa digital</em></h2>
         <ul class="hab-lista" data-anim="subir">
           <li>Illustrator <span class="medidor" data-n="5"></span></li>
           <li>Lightroom <span class="medidor" data-n="5"></span></li>
-          <li>InDesign <span class="medidor" data-n="5"></span></li>
+          <li>InDesign <span class="medidor" data-n="4"></span></li>
           <li>Figma <span class="medidor" data-n="4"></span></li>
-          <li>Canva <span class="medidor" data-n="4"></span></li>
+          <li>Visual Studio <span class="medidor" data-n="4"></span></li>
           <li>CapCut <span class="medidor" data-n="3"></span></li>
         </ul>
-      </div>
+      </div></div>
     </div>
-  </section>
-
-  <!-- ================= MÚSICA ================= -->
-  <section class="seccion musica">
-    <div class="contenedor musica__grid">
-      <div class="tocadiscos" data-anim="escala">
-        <div class="vinilo" data-cursor="ver" data-cursor-txt="Play"><div class="vinilo__etiqueta">Lo que<br>suena</div></div>
-        <div class="brazo"><span></span></div>
-      </div>
-      <div>
-        <span class="eyebrow" data-anim="subir">Lo que me inspira</span>
-        <h2 class="titulo-anim" style="margin-top:14px">Canciones que guían <em>mi proceso</em></h2>
-        <p data-anim="subir" style="margin-top:18px;max-width:46ch">Me inspiro en la música, la moda, el arte y la cultura. Estas son algunas canciones que suenan mientras diseño. Toca una para ponerla en el tocadiscos.</p>
-        <ol class="pistas" data-anim="subir">
-          <li><button type="button" data-color="#AE7F97"><span><b>Canción para bocetar</b><small>Artista · cámbiala en sobre-mi.html</small></span><span class="ecualizador"><i></i><i></i><i></i></span></button></li>
-          <li><button type="button" data-color="#849078"><span><b>Canción para editar fotos</b><small>Artista · cámbiala en sobre-mi.html</small></span><span class="ecualizador"><i></i><i></i><i></i></span></button></li>
-          <li><button type="button" data-color="#683651"><span><b>Canción para conceptualizar</b><small>Artista · cámbiala en sobre-mi.html</small></span><span class="ecualizador"><i></i><i></i><i></i></span></button></li>
-          <li><button type="button" data-color="#C9A96E"><span><b>Canción de cierre de proyecto</b><small>Artista · cámbiala en sobre-mi.html</small></span><span class="ecualizador"><i></i><i></i><i></i></span></button></li>
-        </ol>
-        <p class="musica__nota">Puedes enlazar cada canción a Spotify o YouTube cuando tengas la lista.</p>
-      </div>
     </div>
   </section>
 
@@ -161,17 +165,34 @@
   <section class="seccion cierre">
     <div class="contenedor">
       <h2 class="titulo-anim">¿Hablamos <em>de tu idea?</em></h2>
-      <p class="lead" data-anim="subir">Me encantan los proyectos artísticos y culturales, pero cualquier idea con algo que contar es bienvenida.</p>
-      <div data-anim="subir" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <p class="lead" data-anim="subir">Trabajo con artistas, marcas y colectivos culturales. Si tienes algo propio que contar, escríbeme o empieza por el brief en ALMA.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3" data-anim="subir">
         <a class="btn" href="contacto.html">Escríbeme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--linea" href="proyectos.html">Ver proyectos</a>
+        <a class="btn btn--linea" href="#" data-alma>Llenar el brief en ALMA</a>
       </div>
     </div>
   </section>
 
 </main>
+<!-- Datos y núcleo -->
 <script src="js/datos.js"></script>
-<script src="js/main.js"></script>
+<script src="js/nucleo.js"></script>
+<!-- Átomos, base y moléculas -->
+<script src="js/atomos/medio.js"></script>
+<script src="js/base/animaciones.js"></script>
+<script src="js/moleculas/lupa.js"></script>
+<script src="js/moleculas/arrastrable.js"></script>
+<script src="js/moleculas/tarjeta-proyecto.js"></script>
+<!-- Organismos -->
+<script src="js/organismos/estrellas.js"></script>
+<script src="js/organismos/estructura.js"></script>
+<script src="js/organismos/navegacion.js"></script>
+<script src="js/organismos/transiciones.js"></script>
+<script src="js/organismos/cursor.js"></script>
+<script src="js/organismos/alma.js"></script>
+<!-- Página -->
+<script src="js/paginas/sobre-mi.js"></script>
+<script src="js/app.js"></script>
 <script>
   // medidores de estrellas
   document.querySelectorAll(".medidor").forEach(function (m) {

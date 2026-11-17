@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System · Alejandra Correa</title>
+  <meta name="description" content="Guía viva del Design System del portafolio: tokens y componentes organizados con Atomic Design.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Alejandra Correa · Portafolio">
+  <meta property="og:title" content="Design System · Alejandra Correa">
+  <meta property="og:description" content="Alejandra Correa, diseñadora crossmedia de Pereira. Propósito, manifiesto, arquetipos y proceso: habito, conceptualizo y materializo.">
+  <meta name="twitter:card" content="summary">
+  <meta name="author" content="Alejandra Correa">
+  <meta name="theme-color" content="#683651">
+  <link rel="icon" href="assets/estrella-mora.webp">
+  <link rel="preload" href="assets/fuentes/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Framework CSS: Bootstrap 5.3 (solo grilla y utilidades) -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-utilities.min.css">
+  <!-- Design System: tokens → base → átomos → moléculas → organismos → plantillas -->
+  <link rel="stylesheet" href="css/01-tokens.css">
+  <link rel="stylesheet" href="css/02-base.css">
+  <link rel="stylesheet" href="css/03-atomos.css">
+  <link rel="stylesheet" href="css/04-moleculas.css">
+  <link rel="stylesheet" href="css/05-organismos.css">
+  <link rel="stylesheet" href="css/06-plantillas.css">
+</head>
+<body data-pagina="design-system">
+<a class="visually-hidden-focusable saltar" href="#contenido">Saltar al contenido</a>
+<main id="contenido" tabindex="-1">
+  <section class="cabecera-pag">
+    <div class="contenedor">
+      <h1 class="titulo-anim">Design <em>System</em></h1>
+      <p class="lead" data-anim="subir">Guía viva del sistema visual del portafolio. Todo lo que ves aquí usa los mismos tokens y clases que las páginas, y cada pieza tiene su equivalente en Figma (página «Componentes»).</p>
+      <nav class="ds-indice d-flex flex-wrap gap-2" aria-label="Secciones de la guía">
+        <a class="enlace" href="#tokens">Tokens</a><a class="enlace" href="#atomos">Átomos</a><a class="enlace" href="#moleculas">Moléculas</a><a class="enlace" href="#organismos">Organismos</a><a class="enlace" href="#plantillas">Plantillas y páginas</a><a class="enlace" href="#responsive">Responsive</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================= TOKENS ================= -->
+  <section class="seccion ds-seccion" id="tokens">
+    <div class="contenedor">
+      <h2>Tokens · <em>color</em></h2>
+      <p class="ds-nota">Archivo: <code>css/01-tokens.css</code>. Los primitivos llevan el mismo nombre y HEX que las variables de Figma; los componentes usan alias semánticos (<code>--crema</code>, <code>--ciruela</code>, <code>--color-texto</code>…).</p>
+      <ul class="ds-colores"><li class="ds-color"><span class="ds-color__muestra" style="background:var(--crema-base)"></span><b>--crema-base</b><code data-var="--crema-base"></code><small>Figma: Colores/crema/crema</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--crema-100)"></span><b>--crema-100</b><code data-var="--crema-100"></code><small>Figma: Colores/crema/crema-100</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--crema-300)"></span><b>--crema-300</b><code data-var="--crema-300"></code><small>Figma: Colores/crema/crema-300</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--ciruela-base)"></span><b>--ciruela-base</b><code data-var="--ciruela-base"></code><small>Figma: Colores/ciruela/ciruela</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--ciruela-300)"></span><b>--ciruela-300</b><code data-var="--ciruela-300"></code><small>Figma: Colores/ciruela/ciruela-300</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--ciruela-700)"></span><b>--ciruela-700</b><code data-var="--ciruela-700"></code><small>Figma: Colores/ciruela/ciruela-700</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--ciruela-900)"></span><b>--ciruela-900</b><code data-var="--ciruela-900"></code><small>Figma: Colores/ciruela/ciruela-900</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--salvia-base)"></span><b>--salvia-base</b><code data-var="--salvia-base"></code><small>Figma: Colores/verde-salvia/verde-salvia</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--salvia-300)"></span><b>--salvia-300</b><code data-var="--salvia-300"></code><small>Figma: Colores/verde-salvia/verde-salvia-300</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--salvia-700)"></span><b>--salvia-700</b><code data-var="--salvia-700"></code><small>Figma: Colores/verde-salvia/verde-salvia-700</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--rosa-base)"></span><b>--rosa-base</b><code data-var="--rosa-base"></code><small>Figma: Colores/rosa-claro/rosa-claro</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--rosa-100)"></span><b>--rosa-100</b><code data-var="--rosa-100"></code><small>Figma: Colores/rosa-claro/rosa-claro-100</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--rosa-200)"></span><b>--rosa-200</b><code data-var="--rosa-200"></code><small>Figma: Colores/rosa-claro/rosa-claro-200</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--verde-oscuro)"></span><b>--verde-oscuro</b><code data-var="--verde-oscuro"></code><small>Figma: verde-oscuro</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--verde-oscuro-300)"></span><b>--verde-oscuro-300</b><code data-var="--verde-oscuro-300"></code><small>Figma: verde-oscuro-300</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--papel)"></span><b>--papel</b><code data-var="--papel"></code><small>Figma: — (nuevo, agregar en Figma)</small></li></ul>
+      <h3 class="ds-sub">Estados</h3>
+      <ul class="ds-colores"><li class="ds-color"><span class="ds-color__muestra" style="background:var(--estado-foco)"></span><b>Foco</b><code data-var="--estado-foco"></code><small>--estado-foco</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--estado-hover)"></span><b>Hover</b><code data-var="--estado-hover"></code><small>--estado-hover</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--estado-activo)"></span><b>Activo</b><code data-var="--estado-activo"></code><small>--estado-activo</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--estado-error)"></span><b>Error</b><code data-var="--estado-error"></code><small>--estado-error</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--estado-exito)"></span><b>Éxito</b><code data-var="--estado-exito"></code><small>--estado-exito</small></li>
+<li class="ds-color"><span class="ds-color__muestra" style="background:var(--estado-deshabilitado)"></span><b>Deshabilitado</b><code data-var="--estado-deshabilitado"></code><small>--estado-deshabilitado</small></li></ul>
+
+      <h2 class="ds-h2">Tokens · <em>tipografía</em></h2>
+      <p class="ds-nota">DM Serif Display para títulos y citas; Montserrat (300–700) para texto, etiquetas y botones.</p>
+      <ul class="ds-tipos"><li class="ds-tipo"><small>Display · h1 · DM Serif Display 400 · <code>--fs-display</code></small><span style="font-size:var(--fs-display);font-family:var(--f-titulo);">Habito. Conceptualizo.</span></li>
+<li class="ds-tipo"><small>H2 · sección · DM Serif Display 400 · <code>--fs-h2</code></small><span style="font-size:var(--fs-h2);font-family:var(--f-titulo);">Mis expedientes</span></li>
+<li class="ds-tipo"><small>H3 · tarjeta · DM Serif Display 400 · <code>--fs-h3</code></small><span style="font-size:var(--fs-h3);font-family:var(--f-titulo);">Dirección de arte</span></li>
+<li class="ds-tipo"><small>Cita · DM Serif Display itálica · <code>--fs-cita</code></small><span style="font-size:var(--fs-cita);font-family:var(--f-titulo);font-style:italic;">Busco estrellas en lo cotidiano.</span></li>
+<li class="ds-tipo"><small>Lead · Montserrat 400 · <code>--fs-lead</code></small><span style="font-size:var(--fs-lead);">Le doy forma visual a lo que tiene alma.</span></li>
+<li class="ds-tipo"><small>Cuerpo · Montserrat 400 · <code>--fs-cuerpo</code></small><span style="font-size:var(--fs-cuerpo);">Texto de párrafo para descripciones y detalles.</span></li>
+<li class="ds-tipo"><small>Etiqueta · Montserrat 700 · mayúsculas · <code>--fs-etiqueta</code></small><span style="font-size:var(--fs-etiqueta);text-transform:uppercase;letter-spacing:var(--tracking-etiqueta);font-weight:700;">Marca de accesorios</span></li></ul>
+
+      <h2 class="ds-h2">Tokens · <em>espaciado</em></h2>
+      <p class="ds-nota">Escala de base 4 px para márgenes, paddings y separaciones. Las secciones usan <code>--seccion-y</code> y el margen lateral <code>--pad</code>.</p>
+      <ul class="ds-espacios"><li class="ds-esp"><code>--esp-1</code><span style="width:var(--esp-1)"></span><small data-var="--esp-1"></small></li>
+<li class="ds-esp"><code>--esp-2</code><span style="width:var(--esp-2)"></span><small data-var="--esp-2"></small></li>
+<li class="ds-esp"><code>--esp-3</code><span style="width:var(--esp-3)"></span><small data-var="--esp-3"></small></li>
+<li class="ds-esp"><code>--esp-4</code><span style="width:var(--esp-4)"></span><small data-var="--esp-4"></small></li>
+<li class="ds-esp"><code>--esp-5</code><span style="width:var(--esp-5)"></span><small data-var="--esp-5"></small></li>
+<li class="ds-esp"><code>--esp-6</code><span style="width:var(--esp-6)"></span><small data-var="--esp-6"></small></li>
+<li class="ds-esp"><code>--esp-7</code><span style="width:var(--esp-7)"></span><small data-var="--esp-7"></small></li>
+<li class="ds-esp"><code>--esp-8</code><span style="width:var(--esp-8)"></span><small data-var="--esp-8"></small></li>
+<li class="ds-esp"><code>--esp-9</code><span style="width:var(--esp-9)"></span><small data-var="--esp-9"></small></li>
+<li class="ds-esp"><code>--esp-10</code><span style="width:var(--esp-10)"></span><small data-var="--esp-10"></small></li></ul>
+
+      <h2 class="ds-h2">Tokens · <em>forma</em></h2>
+      <ul class="ds-radios d-flex flex-wrap gap-4"><li><span class="ds-radio" style="border-radius:var(--radio-sm)"></span><code>--radio-sm</code></li>
+<li><span class="ds-radio" style="border-radius:var(--radio)"></span><code>--radio</code></li>
+<li><span class="ds-radio" style="border-radius:var(--radio-md)"></span><code>--radio-md</code></li>
+<li><span class="ds-radio" style="border-radius:var(--radio-lg)"></span><code>--radio-lg</code></li>
+<li><span class="ds-radio" style="border-radius:var(--radio-xl)"></span><code>--radio-xl</code></li>
+<li><span class="ds-radio" style="border-radius:var(--radio-pill)"></span><code>--radio-pill</code></li></ul>
+    </div>
+  </section>
+
+  <!-- ================= ÁTOMOS ================= -->
+  <section class="seccion ds-seccion seccion--clara" id="atomos">
+    <div class="contenedor">
+      <h2>Átomos</h2>
+      <p class="ds-nota">Archivo: <code>css/03-atomos.css</code> · Figma: <b>web/botón</b>, <b>iconos</b>, <b>web/chip</b>, <b>web/imagen-placeholder</b>.</p>
+      <div class="row gy-5">
+        <div class="col-12 col-lg-6">
+          <h3 class="ds-sub">Botones · variantes</h3>
+          <div class="d-flex flex-wrap gap-3 align-items-center">
+            <a class="btn" href="#atomos">Principal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--linea" href="#atomos">Línea</a>
+            <span class="ds-oscuro"><a class="btn btn--crema" href="#atomos">Crema <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></span>
+          </div>
+          <h3 class="ds-sub">Botones · estados</h3>
+          <div class="d-flex flex-wrap gap-3 align-items-center">
+            <a class="btn" href="#atomos">Normal</a>
+            <a class="btn ds-hover" href="#atomos">Hover</a>
+            <a class="btn ds-foco" href="#atomos">Foco</a>
+            <button class="btn" type="button" disabled>Deshabilitado</button>
+          </div>
+          <p class="ds-nota">Clases: <code>.btn</code>, <code>.btn--linea</code>, <code>.btn--crema</code>. Foco con borde punteado; presionado con escala 0,97.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h3 class="ds-sub">Filtros y enlaces</h3>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="filtro activo" type="button" aria-pressed="true">Activo</button>
+            <button class="filtro" type="button" aria-pressed="false">Normal</button>
+            <button class="postal__copiar" type="button">Copiar</button>
+          </div>
+          <p style="margin-top:var(--esp-5)"><a class="enlace" href="#atomos">Enlace con subrayado animado</a></p>
+          <h3 class="ds-sub">Recursos gráficos</h3>
+          <div class="d-flex flex-wrap gap-4 align-items-center ds-recursos">
+            <img src="assets/estrella-mora.webp" alt="Estrella mora" width="56">
+            <img src="assets/estrella-oro.webp" alt="Estrella dorada" width="56">
+            <img src="assets/flor.webp" alt="Flor recortada" width="90">
+            <span class="cinta" style="position:relative;display:inline-block"></span>
+            <span class="cinta cinta--mora" style="position:relative;display:inline-block"></span>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h3 class="ds-sub">Placeholder de imagen</h3>
+          <div class="ph ph--mora" style="--ar:4/3" data-label="Tu imagen aquí"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MOLÉCULAS ================= -->
+  <section class="seccion ds-seccion" id="moleculas">
+    <div class="contenedor">
+      <h2>Moléculas</h2>
+      <p class="ds-nota">Archivo: <code>css/04-moleculas.css</code> · Figma: <b>web/polaroid</b>, <b>folder-web</b>, <b>cards-web</b>, <b>web/foto-proyecto</b>, <b>web/paso-proceso</b>, <b>web/barra-manifiesto</b>.</p>
+      <div class="row gy-5 gx-lg-5 align-items-start">
+        <div class="col-12 col-md-6 col-lg-4">
+          <h3 class="ds-sub">Polaroid</h3>
+          <figure class="polaroid" style="--r:-3deg;margin:0;max-width:260px"><div class="ph ph--salvia" style="--ar:4/5" data-label="Foto"></div><figcaption>Pie de foto</figcaption></figure>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h3 class="ds-sub">Nota con cinta</h3>
+          <div class="nota" style="--r:-2deg;width:250px"><span class="cinta"></span><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M32 8l7 16 17 2-13 11 4 17-15-9-15 9 4-17L8 26l17-2z"/></svg><p>“Mi marca se parece a todas las demás.”</p></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h3 class="ds-sub">Postal de contacto</h3>
+          <article class="postal" style="--r:1deg"><span class="postal__sello"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span><h3>Instagram</h3><p>Mi día a día, procesos y novedades.</p><div class="postal__pie"><small>@_thxale</small></div></article>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h3 class="ds-sub">Carpeta (expediente)</h3>
+          <a class="carpeta" href="#moleculas" style="max-width:440px">
+            <div class="carpeta__foto recorte" style="--r:-4deg"><div class="ph ph--mora" data-label="Foto"></div></div>
+            <div class="carpeta__cuerpo" data-pestana="Concepto"><h3>Dirección de arte</h3><p>Título, texto y pestaña; variantes rosa, salvia y crema.</p></div>
+          </a>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h3 class="ds-sub">Paso del proceso</h3>
+          <article class="paso3" style="--r:-1deg;max-width:340px"><span class="paso3__num">01</span><h3>Habito</h3><p>Número, título y descripción. La variante final va en ciruela.</p></article>
+        </div>
+        <div class="col-12">
+          <h3 class="ds-sub">Barra del manifiesto</h3>
+          <ol class="barras-manifiesto" style="margin:0"><li class="barra-manifiesto visible"><svg class="barra-manifiesto__destello" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c.6 5.4 3.1 8 9 10.5-5.9 2.5-8.4 5.1-9 10.5-.6-5.4-3.1-8-9-10.5 5.9-2.5 8.4-5.1 9-10.5z"/></svg><p>Los <em>detalles</em> comunican más de lo que parece.</p></li><li class="barra-manifiesto barra-manifiesto--salvia visible"><svg class="barra-manifiesto__destello" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c.6 5.4 3.1 8 9 10.5-5.9 2.5-8.4 5.1-9 10.5-.6-5.4-3.1-8-9-10.5 5.9-2.5 8.4-5.1 9-10.5z"/></svg><p>Variante salvia, alterna con la rosa.</p></li></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ORGANISMOS ================= -->
+  <section class="seccion ds-seccion seccion--clara" id="organismos">
+    <div class="contenedor">
+      <h2>Organismos</h2>
+      <p class="ds-nota">Archivos: <code>css/05-organismos.css</code> y <code>js/organismos/</code> · Figma: <b>nav-web</b>, <b>web/footer</b>, <b>encontrar-estrella</b>.</p>
+      <ul class="ds-lista">
+        <li><b>Header / navegación</b> — barra flotante con el contador de estrellas y el botón «Trabajemos»; en móvil se vuelve menú a pantalla completa. <code>js/organismos/estructura.js</code>, <code>navegacion.js</code></li>
+        <li><b>Footer</b> — cierre con llamado a la acción, enlaces y firma; arriba lleva el borde de papel rasgado. Es el mismo en todas las páginas.</li>
+        <li><b>Mesa de fotografías</b> — proyectos como fotos que se arrastran (Inicio y Proyectos). <code>js/moleculas/tarjeta-proyecto.js</code></li>
+        <li><b>Banda de notas</b> — sección ciruela con notas en movimiento horizontal (Inicio).</li>
+        <li><b>Juego de estrellas</b> — 5 estrellas escondidas, contador, aviso y modal. <code>js/organismos/estrellas.js</code></li>
+        <li><b>Transición entre páginas</b> y <b>cursor personalizado</b>. <code>transiciones.js</code>, <code>cursor.js</code></li>
+        <li><b>Cortes de sección</b> — papel rasgado (<code>.corte-top</code>, <code>.corte-bottom</code>) y festón (<code>.feston-top</code>, <code>.feston-bottom</code>).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PLANTILLAS Y PÁGINAS ================= -->
+  <section class="seccion ds-seccion" id="plantillas">
+    <div class="contenedor">
+      <h2>Plantillas y <em>páginas</em></h2>
+      <p class="ds-nota">Archivo: <code>css/06-plantillas.css</code> y <code>js/paginas/</code>. Todas las páginas comparten la plantilla: header → cabecera → secciones → footer.</p>
+      <div class="row gy-4">
+        <div class="col-12 col-md-6 col-lg-3"><a class="ds-pagina" href="index.html"><b>Inicio</b><small>Hero, expedientes, mesa, pistas, manifiesto, cierre</small></a></div>
+        <div class="col-12 col-md-6 col-lg-3"><a class="ds-pagina" href="proyectos.html"><b>Proyectos</b><small>Filtros, vista mesa / lista</small></a></div>
+        <div class="col-12 col-md-6 col-lg-3"><a class="ds-pagina" href="proyecto.html#bloom-store"><b>Ficha de proyecto</b><small>Plantilla que se llena desde datos.js</small></a></div>
+        <div class="col-12 col-md-6 col-lg-3"><a class="ds-pagina" href="sobre-mi.html"><b>Sobre mí · Contacto</b><small>Proceso, lo que pasa detrás, ALMA</small></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESPONSIVE ================= -->
+  <section class="seccion ds-seccion seccion--clara" id="responsive">
+    <div class="contenedor">
+      <h2>Responsive y <em>reglas de uso</em></h2>
+      <ul class="ds-lista">
+        <li><b>Escritorio (&gt; 1024 px):</b> grilla de Bootstrap a dos columnas, collage y mesas con elementos libres.</li>
+        <li><b>Tableta (≤ 1024 px y ≤ 860 px):</b> las columnas se apilan, el menú pasa a hamburguesa y se ocultan decoraciones que tapan títulos.</li>
+        <li><b>Móvil (≤ 600 px):</b> una columna, mesas más altas con fotos en dos columnas y bordes de sección más finos.</li>
+        <li><b>Movimiento reducido:</b> si el sistema lo pide, las animaciones se desactivan y todo el contenido queda visible.</li>
+        <li><b>Uso de color:</b> ciruela para acciones y títulos, salvia para acentos en itálica, crema y papel para fondos; salvia-700 para textos pequeños (contraste).</li>
+        <li><b>Uso tipográfico:</b> un solo título Display por página; itálica DM Serif solo para la palabra que se quiere destacar.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<!-- Datos y núcleo -->
+<script src="js/datos.js"></script>
+<script src="js/nucleo.js"></script>
+<!-- Átomos, base y moléculas -->
+<script src="js/atomos/medio.js"></script>
+<script src="js/base/animaciones.js"></script>
+<script src="js/moleculas/lupa.js"></script>
+<script src="js/moleculas/arrastrable.js"></script>
+<script src="js/moleculas/tarjeta-proyecto.js"></script>
+<!-- Organismos -->
+<script src="js/organismos/estrellas.js"></script>
+<script src="js/organismos/estructura.js"></script>
+<script src="js/organismos/navegacion.js"></script>
+<script src="js/organismos/transiciones.js"></script>
+<script src="js/organismos/cursor.js"></script>
+<script src="js/organismos/alma.js"></script>
+<!-- Página -->
+<script src="js/paginas/design-system.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

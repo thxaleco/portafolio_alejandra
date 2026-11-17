@@ -5,21 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Proyectos · Alejandra Correa</title>
   <meta name="description" content="Proyectos de identidad, editorial, redes, fotografía y audiovisual de Alejandra Correa.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Alejandra Correa · Portafolio">
+  <meta property="og:title" content="Proyectos · Alejandra Correa">
+  <meta property="og:description" content="Proyectos de identidad, editorial, redes, fotografía y audiovisual de Alejandra Correa.">
+  <meta name="twitter:card" content="summary">
+  <meta name="author" content="Alejandra Correa">
   <meta name="theme-color" content="#683651">
   <link rel="icon" href="assets/estrella-mora.webp">
   <link rel="preload" href="assets/fuentes/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Framework CSS: Bootstrap 5.3 (solo grilla y utilidades) -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-utilities.min.css">
+  <!-- Design System: tokens → base → átomos → moléculas → organismos → plantillas -->
+  <link rel="stylesheet" href="css/01-tokens.css">
+  <link rel="stylesheet" href="css/02-base.css">
+  <link rel="stylesheet" href="css/03-atomos.css">
+  <link rel="stylesheet" href="css/04-moleculas.css">
+  <link rel="stylesheet" href="css/05-organismos.css">
+  <link rel="stylesheet" href="css/06-plantillas.css">
 </head>
 <body data-pagina="proyectos">
-<main>
+<a class="visually-hidden-focusable saltar" href="#contenido">Saltar al contenido</a>
+<main id="contenido" tabindex="-1">
   <section class="cabecera-pag">
     <div class="contenedor">
-      <span class="eyebrow" data-anim="subir">Archivo de trabajos</span>
-      <h1 class="titulo-anim">Proyectos <em>y trabajos</em></h1>
-      <p class="lead" data-anim="subir" style="--d:.3s">Marcas, eventos, catálogos, reels y piezas culturales. Míralos ordenados o regados sobre mi mesa de trabajo: puedes moverlos, apilarlos y abrir el que te llame.</p>
+      <h1 class="titulo-anim">Mis <em>proyectos</em></h1>
+      <p class="lead" data-anim="subir" style="--d:.3s">Marcas, videoclips, catálogos, fotografía y piezas culturales. Están sueltos sobre mi mesa de trabajo: muévelos, apílalos y abre el que te llame. Si prefieres orden, cámbialos a lista.</p>
     </div>
     <svg class="flecha" viewBox="0 0 90 70" style="right:22%;top:62%;width:110px;transform:rotate(10deg)"><path d="M6 8c26-6 56 6 64 40M58 40l12 12 10-14"/></svg>
-    <img class="flor" src="assets/flor.webp" alt="" style="right:-40px;top:110px;width:240px;transform:rotate(16deg)" data-parallax=".7">
+    <img class="flor" src="assets/flor.webp" alt="" style="right:3%;top:110px;width:220px;transform:rotate(16deg)" data-parallax=".7">
     <img class="estrella" src="assets/estrella-oro.webp" alt="" style="right:18%;top:140px;width:56px" data-parallax="1.3" data-girar=".1">
   </section>
 
@@ -36,14 +52,31 @@
       <p class="mesa__pista">Arrastra las piezas · toca la flecha para abrir</p>
       <img class="mesa__deco" src="assets/flor.webp" alt="" style="right:3%;bottom:4%;width:200px;transform:rotate(-12deg);opacity:.9">
       <img class="mesa__deco" src="assets/estrella-mora.webp" alt="" style="left:38%;top:40%;width:50px;transform:rotate(18deg)">
-      <svg class="mesa__deco" viewBox="0 0 40 80" fill="none" stroke="#849078" stroke-width="3" stroke-linecap="round" style="left:70%;top:46%;width:22px;transform:rotate(-30deg)"><path d="M28 22v36a10 10 0 01-20 0V14a7 7 0 0114 0v40a3.5 3.5 0 01-7 0V22"/></svg>
+      <img class="mesa__deco" src="assets/estrella-oro.webp" alt="" style="left:70%;top:46%;width:44px;transform:rotate(-12deg)">
       <button class="estrella-oculta" data-id="proyectos" style="left:92%;top:42%"></button>
     </div>
 
     <div class="lista-proy" id="lista-proy" hidden></div>
   </section>
 </main>
+<!-- Datos y núcleo -->
 <script src="js/datos.js"></script>
-<script src="js/main.js"></script>
+<script src="js/nucleo.js"></script>
+<!-- Átomos, base y moléculas -->
+<script src="js/atomos/medio.js"></script>
+<script src="js/base/animaciones.js"></script>
+<script src="js/moleculas/lupa.js"></script>
+<script src="js/moleculas/arrastrable.js"></script>
+<script src="js/moleculas/tarjeta-proyecto.js"></script>
+<!-- Organismos -->
+<script src="js/organismos/estrellas.js"></script>
+<script src="js/organismos/estructura.js"></script>
+<script src="js/organismos/navegacion.js"></script>
+<script src="js/organismos/transiciones.js"></script>
+<script src="js/organismos/cursor.js"></script>
+<script src="js/organismos/alma.js"></script>
+<!-- Página -->
+<script src="js/paginas/proyectos.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
