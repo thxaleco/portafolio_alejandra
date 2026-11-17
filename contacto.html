@@ -5,13 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto · Alejandra Correa</title>
   <meta name="description" content="Escríbele a Alejandra Correa para tu próximo proyecto de marca, editorial, fotografía o audiovisual.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Alejandra Correa · Portafolio">
+  <meta property="og:title" content="Contacto · Alejandra Correa">
+  <meta property="og:description" content="Escríbele a Alejandra Correa para tu próximo proyecto de marca, editorial, fotografía o audiovisual.">
+  <meta name="twitter:card" content="summary">
+  <meta name="author" content="Alejandra Correa">
   <meta name="theme-color" content="#683651">
   <link rel="icon" href="assets/estrella-mora.webp">
   <link rel="preload" href="assets/fuentes/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Framework CSS: Bootstrap 5.3 (solo grilla y utilidades) -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-utilities.min.css">
+  <!-- Design System: tokens → base → átomos → moléculas → organismos → plantillas -->
+  <link rel="stylesheet" href="css/01-tokens.css">
+  <link rel="stylesheet" href="css/02-base.css">
+  <link rel="stylesheet" href="css/03-atomos.css">
+  <link rel="stylesheet" href="css/04-moleculas.css">
+  <link rel="stylesheet" href="css/05-organismos.css">
+  <link rel="stylesheet" href="css/06-plantillas.css">
 </head>
 <body data-pagina="contacto">
-<main>
+<a class="visually-hidden-focusable saltar" href="#contenido">Saltar al contenido</a>
+<main id="contenido" tabindex="-1">
   <section class="cabecera-pag" style="padding-bottom:40px">
     <div class="contenedor">
       <h1 class="titulo-anim">Empecemos <em>a conversar</em></h1>
@@ -22,8 +39,9 @@
   </section>
 
   <section class="contenedor caminos" style="padding-bottom:120px">
+    <div class="row g-5 align-items-start">
     <!-- Camino 1: ALMA -->
-    <div class="camino-alma" data-anim="subir">
+    <div class="col-12 col-lg-5"><div class="camino-alma" data-anim="subir">
       <div class="camino-alma__sello">ALMA</div>
       <h2>¿Tienes un proyecto? <em>Cuéntamelo en ALMA</em></h2>
       <p>ALMA es mi app de brief. Te hace las preguntas necesarias para contarme tu proyecto, tus referentes y lo que esperas, a tu ritmo.</p>
@@ -35,10 +53,10 @@
       <a class="btn btn--crema" href="#" data-alma>Abrir ALMA <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <img class="flor" src="assets/flor.webp" alt="" style="right:-30px;bottom:-40px;width:170px;transform:rotate(14deg)">
       <img class="estrella" src="assets/estrella-oro.webp" alt="" style="right:34px;top:30px;width:56px" data-girar=".1">
-    </div>
+    </div></div>
 
     <!-- Camino 2: directo -->
-    <div class="camino-directo" style="position:relative">
+    <div class="col-12 col-lg-7"><div class="camino-directo" style="position:relative">
       <h2 class="camino-directo__titulo titulo-anim">¿Es algo rápido? <em>Escríbeme directo</em></h2>
       <div class="postales">
         <article class="postal" data-anim="caer" style="--r:-1.5deg;--d:0.00s">
@@ -78,8 +96,9 @@
         </article>
       </div>
       <button class="estrella-oculta" data-id="contacto" data-color="mora" style="right:-10px;bottom:-40px"></button>
-    </div>
-  </section>
+    </div></div>
+  </div>
+    </section>
 
   <!-- ================= FAQ ================= -->
   <section class="seccion" style="padding-top:20px">
@@ -97,7 +116,24 @@
     </div>
   </section>
 </main>
+<!-- Datos y núcleo -->
 <script src="js/datos.js"></script>
-<script src="js/main.js"></script>
+<script src="js/nucleo.js"></script>
+<!-- Átomos, base y moléculas -->
+<script src="js/atomos/medio.js"></script>
+<script src="js/base/animaciones.js"></script>
+<script src="js/moleculas/lupa.js"></script>
+<script src="js/moleculas/arrastrable.js"></script>
+<script src="js/moleculas/tarjeta-proyecto.js"></script>
+<!-- Organismos -->
+<script src="js/organismos/estrellas.js"></script>
+<script src="js/organismos/estructura.js"></script>
+<script src="js/organismos/navegacion.js"></script>
+<script src="js/organismos/transiciones.js"></script>
+<script src="js/organismos/cursor.js"></script>
+<script src="js/organismos/alma.js"></script>
+<!-- Página -->
+<script src="js/paginas/contacto.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
