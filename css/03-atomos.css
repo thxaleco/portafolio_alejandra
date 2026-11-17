@@ -1,0 +1,103 @@
+/* =========================================================
+   ÁTOMOS · botones, enlaces, estrellas, flor, cinta, clip, placeholders de imagen
+   Alejandra Correa · Portafolio
+   ========================================================= */
+
+/* ---------- Botones ---------- */
+.btn {
+  --bg: var(--ciruela); --fg: var(--crema-claro);
+  position: relative; display: inline-flex; align-items: center; gap: .7em;
+  padding: var(--esp-3) var(--esp-5); border-radius: var(--radio-pill);
+  background: var(--bg); color: var(--fg); border: 1px solid var(--bg);
+  font-family: var(--f-texto); font-size: .78rem; font-weight: var(--peso-semibold); letter-spacing: var(--tracking-boton); text-transform: uppercase;
+  text-decoration: none; overflow: hidden; isolation: isolate;
+  transition: color .4s var(--ease), border-color .4s var(--ease), transform .4s var(--ease);
+}
+.btn::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--pino); transform: translateY(101%); border-radius: inherit;
+  transition: transform .5s var(--ease);
+}
+.btn:hover::before { transform: translateY(0); }
+.btn:hover { border-color: var(--pino); }
+.btn svg { width: 1.1em; transition: transform .4s var(--ease); }
+.btn:hover svg { transform: translateX(4px) rotate(-8deg); }
+.btn--linea { --bg: transparent; --fg: var(--ciruela); border-color: var(--ciruela); }
+.btn--linea::before { background: var(--ciruela); }
+.btn--linea:hover { color: var(--crema-claro); }
+.btn--crema { --bg: var(--crema-claro); --fg: var(--ciruela); }
+.btn--crema::before { background: var(--mora); }
+.btn--crema:hover { color: var(--blanco); border-color: var(--mora); }
+.enlace {
+  text-decoration: none; font-weight: 600; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size .4s var(--ease); padding-bottom: 2px;
+}
+.enlace:hover { background-size: 100% 1px; }
+
+/* ---------- Elementos De Collage ---------- */
+.estrella { position: absolute; width: 70px; pointer-events: none; filter: drop-shadow(2px 6px 6px rgba(39, 50, 34, .3)); will-change: transform; }
+.flor { position: absolute; width: 220px; pointer-events: none; filter: drop-shadow(3px 8px 10px rgba(39, 50, 34, .25)); }
+.cinta {
+  position: absolute; width: 96px; height: 28px; background: rgba(201, 207, 191, .72);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .08); z-index: 3;
+  -webkit-mask: linear-gradient(90deg, transparent 0 2px, #000 2px calc(100% - 2px), transparent 0),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='28'%3E%3Cpath d='M0 0h6v28H0z'/%3E%3C/svg%3E");
+}
+.cinta--mora { background: rgba(174, 127, 151, .55); }
+.clip { position: absolute; width: 26px; z-index: 4; filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, .25)); }
+
+/* ---------- PLACEHOLDERS (reemplazar por imagen/video real) ---------- */
+.ph {
+  --c1: var(--mora-claro); --c2: var(--mora);
+  position: relative; width: 100%; aspect-ratio: var(--ar, 4/5); overflow: hidden;
+  background:
+    repeating-linear-gradient(-45deg, transparent 0 14px, rgba(255, 255, 255, .22) 14px 15px),
+    linear-gradient(140deg, var(--c1), var(--c2));
+  display: grid; place-items: center; color: var(--blanco); text-align: center;
+}
+.ph::after {
+  content: attr(data-label);
+  font-size: .62rem; font-weight: 600; letter-spacing: var(--tracking-etiqueta); text-transform: uppercase;
+  padding: .6em 1em; border: 1px dashed rgba(255, 255, 255, .8); border-radius: var(--radio-pill); max-width: 80%;
+  background: rgba(74, 37, 57, .18);
+}
+.ph--salvia { --c1: var(--salvia-claro); --c2: var(--salvia); }
+.ph--ciruela { --c1: var(--mora); --c2: var(--ciruela); }
+.ph--crema { --c1: var(--crema-claro); --c2: var(--crema-oscuro); color: var(--ciruela); }
+.ph--crema::after { border-color: var(--mora); background: transparent; }
+.ph--video::before {
+  content: ""; position: absolute; width: 58px; height: 58px; border-radius: 50%;
+  background: rgba(255, 253, 248, .9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6.5v11l9-5.5z' fill='%23683651'/%3E%3C/svg%3E") center/26px no-repeat;
+  top: calc(50% - 70px); left: calc(50% - 29px);
+}
+.ph--boceto {
+  background-color: var(--blanco);
+  background-image:
+    linear-gradient(rgba(132, 144, 120, .22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(132, 144, 120, .22) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--ciruela);
+}
+.ph--boceto::after { border-color: var(--ciruela); background: var(--blanco); color: var(--ciruela); }
+.ph--boceto svg.trazos { position: absolute; inset: 8%; width: 84%; height: 84%; }
+.ph img,
+.ph video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph:has(img)::after,
+.ph:has(video)::after,
+.ph:has(img)::before,
+.ph:has(video)::before { display: none; }
+
+/* ---------- Estados de los átomos interactivos ---------- */
+/* foco visible con la misma regla en todo el sistema */
+.btn:focus-visible, .filtro:focus-visible, .vista:focus-visible, .postal__copiar:focus-visible,
+.enlace:focus-visible, .circulo-btn:focus-visible { outline: 2px dashed var(--estado-foco); outline-offset: 4px; }
+/* presionado */
+.btn:active, .filtro:active, .vista:active, .postal__copiar:active { transform: scale(.97); }
+/* deshabilitado */
+.btn:disabled, .btn[aria-disabled="true"] {
+  --bg: var(--estado-deshabilitado); --fg: var(--ciruela-300);
+  border-color: var(--estado-deshabilitado); pointer-events: none; cursor: not-allowed;
+}
+/* activo (filtro o vista seleccionada) */
+.filtro[aria-pressed="true"], .filtro.activo { background: var(--estado-activo); color: var(--crema-claro); border-color: var(--estado-activo); }

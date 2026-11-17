@@ -1,0 +1,97 @@
+/* =========================================================
+   MOLÉCULAS · polaroid, lupa, carpeta, nota, tarjeta de proyecto
+   Alejandra Correa · Portafolio
+   ========================================================= */
+
+/* ---------- Elementos De Collage ---------- */
+.polaroid {
+  position: relative; background: var(--blanco); padding: var(--esp-3) var(--esp-3) 52px; box-shadow: var(--sombra-alta);
+  transform: rotate(var(--r, -3deg));
+}
+.polaroid figcaption { position: absolute; left: 0; right: 0; bottom: 14px; text-align: center; font-family: var(--f-titulo); font-style: italic; color: var(--ciruela); font-size: 1.05rem; }
+.recorte { background: var(--blanco); padding: 7px; box-shadow: var(--sombra); }
+
+/* ---------- LUPA: revela el boceto debajo de la pieza ---------- */
+.lupa-zona { position: relative; overflow: hidden; }
+.lupa-zona .capa-boceto {
+  position: absolute; inset: 0; z-index: 2;
+  -webkit-mask-image: radial-gradient(circle var(--lr, 0px) at var(--lx, 50%) var(--ly, 50%), #000 98%, transparent 100%);
+          mask-image: radial-gradient(circle var(--lr, 0px) at var(--lx, 50%) var(--ly, 50%), #000 98%, transparent 100%);
+  transition: --lr .3s;
+}
+.lupa-zona .capa-boceto .ph { height: 100%; aspect-ratio: auto; }
+.lupa-pista {
+  position: absolute; left: 12px; bottom: 12px; z-index: 3;
+  display: inline-flex; align-items: center; gap: var(--esp-2);
+  background: var(--blanco); color: var(--ciruela); border-radius: var(--radio-pill); padding: 5px 11px 5px 7px;
+  font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; box-shadow: var(--sombra);
+  transition: opacity .3s;
+}
+.lupa-pista svg { width: 16px; }
+.lupa-zona:hover .lupa-pista { opacity: 0; }
+
+/* ---------- SERVICIOS como carpetas ---------- */
+.carpetas { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(28px, 4vw, 54px) clamp(20px, 3vw, 40px); max-width: 980px; margin: 0 auto; }
+.carpeta { position: relative; padding-top: 70px; text-decoration: none; display: block; }
+.carpeta__foto {
+  position: absolute; top: 0; left: 12%; width: 62%; z-index: 1; transform: rotate(var(--r, -3deg));
+  transition: transform .6s var(--rebote);
+}
+.carpeta__foto .ph { --ar: 16/10; }
+.carpeta__cuerpo {
+  --fc: var(--mora-claro);
+  position: relative; z-index: 2; background: var(--fc); border-radius: 4px 10px 10px 10px; padding: 34px 28px 28px; min-height: 190px;
+  box-shadow: var(--sombra); transition: transform .5s var(--ease), box-shadow .5s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.carpeta__cuerpo::before {
+  content: attr(data-pestana); position: absolute; left: 0; top: -26px; height: 27px; padding: 6px 18px 0 14px;
+  background: var(--fc); border-radius: 8px 14px 0 0; font-size: .58rem; font-weight: 700; letter-spacing: var(--tracking-etiqueta); text-transform: uppercase; color: var(--ciruela);
+}
+.carpeta h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin-bottom: 6px; }
+.carpeta p { font-size: .88rem; margin: 0; max-width: 34ch; }
+.carpeta__icono { position: absolute; right: 20px; top: 18px; width: 54px; transition: transform .6s var(--rebote); }
+.carpeta:hover .carpeta__foto { transform: translateY(-34px) rotate(calc(var(--r, -3deg) * -1.4)); }
+.carpeta:hover .carpeta__cuerpo { transform: translateY(4px); }
+.carpeta:hover .carpeta__icono { transform: rotate(-24deg) scale(1.12); }
+.carpeta--salvia .carpeta__cuerpo { --fc: var(--salvia-claro); }
+.carpeta--crema .carpeta__cuerpo { --fc: var(--crema-oscuro); }
+.carpeta--mora .carpeta__cuerpo { --fc: #D9BFCC; }
+
+/* ---------- Sección oscura con notas ---------- */
+.nota {
+  min-height: 210px; padding: 30px var(--esp-5) 22px; background: var(--crema-claro); color: var(--ciruela);
+  transform: rotate(var(--r, -2deg)); box-shadow: 0 18px 30px -18px rgba(0, 0, 0, .55);
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--esp-4); position: relative;
+  transition: transform .5s var(--rebote);
+}
+.nota:hover { transform: rotate(0) translateY(-10px) scale(1.04); }
+.nota:nth-child(4n+2) { background: var(--salvia-claro); }
+.nota:nth-child(4n+3) { background: var(--mora-claro); }
+.nota:nth-child(4n+4) { background: #F2EAC9; }
+.nota svg { width: 44px; color: var(--ciruela); }
+.nota p { font-family: var(--f-titulo); font-style: italic; font-size: 1.12rem; line-height: 1.25; margin: 0; }
+.nota .cinta { top: -12px; left: calc(50% - 48px); transform: rotate(-3deg); }
+
+/* ---------- Proyectos destacados (inicio) ---------- */
+.tarjeta-proy { text-decoration: none; display: block; position: relative; }
+.tarjeta-proy:nth-child(1) { grid-column: 1 / span 7; }
+.tarjeta-proy:nth-child(2) { grid-column: 8 / span 5; margin-top: 90px; }
+.tarjeta-proy:nth-child(3) { grid-column: 2 / span 5; margin-top: -120px; }
+.tarjeta-proy:nth-child(4) { grid-column: 7 / span 6; margin-top: 70px; }
+.tarjeta-proy .marco { transform: rotate(var(--r, 0deg)); transition: transform .6s var(--ease); background: var(--blanco); padding: 10px; box-shadow: var(--sombra); }
+.tarjeta-proy:hover .marco { transform: rotate(0deg) translateY(-6px); box-shadow: var(--sombra-alta); }
+.tarjeta-proy .marco .ph { transition: transform .8s var(--ease); }
+.tarjeta-proy:hover .marco .ph { transform: scale(1.03); }
+.tarjeta-proy__info { display: flex; justify-content: space-between; align-items: baseline; gap: var(--esp-3); margin-top: 18px; }
+.tarjeta-proy h3 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+.tarjeta-proy small { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--salvia-700); font-weight: 600; white-space: nowrap; }
+.tarjeta-proy .num { font-family: var(--f-titulo); font-style: italic; color: var(--mora); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: var(--esp-2); margin-top: 10px; }
+.etiqueta { font-size: .6rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; padding: 5px 10px; border-radius: var(--radio-pill); border: 1px solid rgba(104, 54, 81, .3); color: var(--ciruela); }
+
+/* ---------- Pieza larga con desplazamiento (galería de proyecto) ---------- */
+.galeria-scroll { margin: 0; }
+.galeria-scroll__ventana { height: var(--alto, 520px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--mora) transparent; }
+.galeria-scroll__ventana img { width: 100%; height: auto; display: block; }
+.galeria-scroll figcaption { font-family: var(--f-titulo); font-style: italic; font-size: .95rem; color: var(--ciruela); text-align: center; padding: var(--esp-2) 0 0; }

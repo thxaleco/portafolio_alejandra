@@ -1,0 +1,20 @@
+# Publicación en Netlify: sitio estático, sin paso de compilación.
+[build]
+  publish = "."
+
+# Caché larga para recursos que no cambian de nombre; HTML siempre fresco.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,128 @@
+/* =========================================================
+   DESIGN TOKENS · fuentes, color, tipografía, espaciado, radios, sombras, movimiento
+   Alejandra Correa · Portafolio
+   ========================================================= */
+
+/* ---------- Fuentes alojadas en el sitio ---------- */
+@font-face{font-family:"DM Serif Display";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fuentes/dm-serif-display-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"DM Serif Display";font-style:italic;font-weight:400;font-display:swap;src:url("../assets/fuentes/dm-serif-display-latin-400-italic.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:300;font-display:swap;src:url("../assets/fuentes/montserrat-latin-300-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fuentes/montserrat-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500;font-display:swap;src:url("../assets/fuentes/montserrat-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:600;font-display:swap;src:url("../assets/fuentes/montserrat-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fuentes/montserrat-latin-700-normal.woff2") format("woff2")}
+:root {
+  /* ---------- COLOR · primitivos (mismos nombres y HEX que las variables de Figma) ---------- */
+  --crema-base: #EDEAE0;          /* Figma: Colores/crema/crema */
+  --crema-100: #F3F3F2;           /* Figma: Colores/crema/crema-100 */
+  --crema-300: #E2DDCF;           /* Figma: Colores/crema/crema-300 */
+  --ciruela-base: #683651;        /* Figma: Colores/ciruela/ciruela */
+  --ciruela-300: #C3A2B4;         /* Figma: Colores/ciruela/ciruela-300 */
+  --ciruela-700: #602F47;         /* Figma: Colores/ciruela/ciruela-700 */
+  --ciruela-900: #3D1F2D;         /* Figma: Colores/ciruela/ciruela-900 */
+  --salvia-base: #849078;         /* Figma: Colores/verde-salvia/verde-salvia */
+  --salvia-300: #B3B8AD;          /* Figma: Colores/verde-salvia/verde-salvia-300 */
+  --salvia-700: #596350;          /* Figma: Colores/verde-salvia/verde-salvia-700 */
+  --rosa-base: #AE7F97;           /* Figma: Colores/rosa-claro/rosa-claro */
+  --rosa-100: #D5C3CC;            /* Figma: Colores/rosa-claro/rosa-claro-100 */
+  --rosa-200: #E0C3D1;            /* Figma: Colores/rosa-claro/rosa-claro-200 */
+  --verde-oscuro: #273222;        /* Figma: verde-oscuro */
+  --verde-oscuro-300: #AFBDA8;    /* Figma: verde-oscuro-300 */
+  --papel: #FFFDF8;               /* blanco cálido del papel (polaroids, tarjetas) */
+
+  /* ---------- COLOR · semánticos (los que usan los componentes) ---------- */
+  --crema: var(--crema-base);
+  --crema-claro: var(--crema-100);
+  --crema-oscuro: var(--crema-300);
+  --ciruela: var(--ciruela-base);
+  --ciruela-oscuro: var(--ciruela-700);
+  --salvia: var(--salvia-base);
+  --salvia-claro: #C9CFBF;        /* salvia suave para fondos amplios (rayas, chips) */
+  --mora: var(--rosa-base);
+  --mora-claro: var(--rosa-200);
+  --pino: var(--verde-oscuro);
+  --blanco: var(--papel);
+
+  --color-fondo: var(--crema);
+  --color-fondo-alterno: var(--crema-claro);
+  --color-texto: var(--ciruela-700);
+  --color-titulo: var(--ciruela);
+  --color-acento: var(--salvia);
+  --color-borde: rgba(104, 54, 81, .2);
+
+  /* estados */
+  --estado-foco: var(--ciruela);
+  --estado-hover: var(--verde-oscuro);
+  --estado-activo: var(--ciruela);
+  --estado-error: #A3384F;
+  --estado-exito: var(--salvia-700);
+  --estado-deshabilitado: var(--crema-300);
+
+  /* ---------- TIPOGRAFÍA ---------- */
+  --f-titulo: "DM Serif Display", Georgia, serif;
+  --f-texto: "Montserrat", system-ui, sans-serif;
+
+  --fs-display: clamp(2.8rem, 7.2vw, 6.2rem);   /* h1 de página */
+  --fs-h2: clamp(2.2rem, 5vw, 4.2rem);          /* título de sección */
+  --fs-h3: clamp(1.4rem, 2.4vw, 2rem);          /* título de tarjeta */
+  --fs-cita: clamp(1.15rem, 1.8vw, 1.4rem);     /* frases en itálica */
+  --fs-lead: clamp(1rem, 1.3vw, 1.15rem);       /* párrafo destacado */
+  --fs-cuerpo: 1rem;                            /* 16 px */
+  --fs-pequeno: .875rem;                        /* 14 px */
+  --fs-etiqueta: .7rem;                         /* etiquetas en mayúscula */
+
+  --peso-regular: 400;
+  --peso-medio: 500;
+  --peso-semibold: 600;
+  --peso-bold: 700;
+
+  --lh-titulo: 1.08;
+  --lh-texto: 1.65;
+  --tracking-etiqueta: .2em;
+  --tracking-boton: .14em;
+
+  /* ---------- ESPACIADO · escala base 4 px ---------- */
+  --esp-1: 4px;
+  --esp-2: 8px;
+  --esp-3: 12px;
+  --esp-4: 16px;
+  --esp-5: 24px;
+  --esp-6: 32px;
+  --esp-7: 48px;
+  --esp-8: 64px;
+  --esp-9: 96px;
+  --esp-10: 128px;
+  --seccion-y: clamp(80px, 12vw, 160px);        /* aire vertical de cada sección */
+  --pad: clamp(20px, 5vw, 64px);                /* margen lateral de la página */
+  --ancho: 1240px;                              /* ancho máximo del contenido */
+
+  /* ---------- FORMA ---------- */
+  --radio-sm: 4px;
+  --radio: 6px;
+  --radio-md: 10px;
+  --radio-lg: 14px;
+  --radio-xl: 28px;
+  --radio-pill: 999px;
+
+  --sombra: 0 1px 2px rgba(39, 50, 34, .08), 0 10px 24px -8px rgba(39, 50, 34, .22);
+  --sombra-alta: 0 2px 4px rgba(39, 50, 34, .1), 0 24px 48px -16px rgba(39, 50, 34, .35);
+
+  /* ---------- MOVIMIENTO ---------- */
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --rebote: cubic-bezier(.34, 1.56, .64, 1);
+  --dur-rapida: .3s;
+  --dur-media: .6s;
+  --dur-lenta: 1s;
+
+  /* ---------- CAPAS ---------- */
+  --z-contenido: 1;
+  --z-menu: 850;
+  --z-nav: 900;
+  --z-aviso: 9997;
+  --z-modal: 9998;
+  --z-transicion: 9999;
+}
+
+/* Puntos de quiebre (no pueden ser variables CSS dentro de @media):
+   tableta ≤ 1024 px · tableta vertical ≤ 860 px · móvil ≤ 600 px.
+   Coinciden con los de Bootstrap lg (992) y md (768) en el comportamiento de la grilla. */
